@@ -1,0 +1,6 @@
+com\sunrisedental\dao\UserDAOTest.class
+com\sunrisedental\dao\BillCalculationTest.class
+com\sunrisedental\dao\AppointmentSearchTest.class
+com\sunrisedental\dao\AppointmentDAOTest.class
+com\sunrisedental\dao\DentistValidationTest.class
+com\sunrisedental\dao\AppointmentValidationTest.class

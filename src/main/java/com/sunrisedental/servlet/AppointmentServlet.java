@@ -23,14 +23,17 @@ public class AppointmentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String patientName = request.getParameter("patientName");
-        String nic = request.getParameter("nic");
+        
         String contactNumber = request.getParameter("contactNumber");
         String appointmentDate = request.getParameter("appointmentDate");
         String treatmentType = request.getParameter("treatmentType");
+        String dentistName = request.getParameter("dentistName");
+        String appointmentTime = request.getParameter("appointmentTime");
+        String status = "Pending";
 
         String appointmentNumber = CodeGenerator.generateAppointmentNumber();
 
-        Appointment appointment = new Appointment(appointmentNumber, patientName, nic, contactNumber, appointmentDate, treatmentType);
+Appointment appointment = new Appointment(appointmentNumber, patientName, contactNumber, appointmentDate, treatmentType, dentistName, appointmentTime, status);
         boolean isSuccess = appointmentDAO.addAppointment(appointment);
 
         if (isSuccess) {
