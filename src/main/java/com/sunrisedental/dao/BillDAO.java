@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class BillDAO {
+public class BillingDAO {
 
     public boolean saveBill(Bill bill) {
         boolean status = false;
