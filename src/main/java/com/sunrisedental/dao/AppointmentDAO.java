@@ -37,7 +37,7 @@ public class AppointmentDAO {
 
     public List<Appointment> getAllAppointments() {
         List<Appointment> list = new ArrayList<>();
-        String sql = "SELECT * FROM appointments ORDER BY id DESC";
+        String sql = "SELECT * FROM appointments ORDER BY created_at DESC";
 
         try (Connection conn = DBConnection.getConnection();
              Statement stmt = conn.createStatement();
@@ -45,7 +45,7 @@ public class AppointmentDAO {
 
             while (rs.next()) {
                 Appointment app = new Appointment();
-                app.setId(rs.getInt("id"));
+               // app.setId(rs.getInt("id"));
                 app.setAppointmentNumber(rs.getString("appointment_number"));
                 app.setPatientName(rs.getString("patient_name"));
                 app.setAddress(rs.getString("address"));
@@ -65,7 +65,7 @@ public class AppointmentDAO {
 
     public List<Appointment> getAppointmentsByDate(String dateStr) {
         List<Appointment> list = new ArrayList<>();
-        String sql = "SELECT * FROM appointments WHERE appointment_date = ? ORDER BY id DESC";
+        String sql = "SELECT * FROM appointments WHERE appointment_date = ? ORDER BY  DESC";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -75,7 +75,7 @@ public class AppointmentDAO {
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
                     Appointment app = new Appointment();
-                    app.setId(rs.getInt("id"));
+                    //app.setId(rs.getInt("id"));
                     app.setAppointmentNumber(rs.getString("appointment_number"));
                     app.setPatientName(rs.getString("patient_name"));
                     app.setAddress(rs.getString("address"));
