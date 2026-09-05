@@ -12,7 +12,7 @@ public class DentistValidationTest {
         String validName2 = "John Doe";
         
         // Invalid names containing numbers or prohibited characters
-        String invalidNameWithDigits = "Dr. John 2nd";
+        String invalidNameWithDigits = "Dr. John 3nd";
         String invalidNameWithSymbols = "Dr. Smith#";
 
         String regex = "^[a-zA-Z\\s\\.]+$";

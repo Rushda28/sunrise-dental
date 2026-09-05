@@ -26,6 +26,8 @@ public class AppointmentSearchTest {
         assertTrue(validApptNo.matches(regex), "Valid appointment reference format should match.");
     }
 
+
+    // Non existing appointment reference format: SUN-1234
     @Test
     public void testNonExistingAppointmentLookupLogic() {
         // Simulating a search result set state where no rows are returned
@@ -38,4 +40,6 @@ public class AppointmentSearchTest {
         assertEquals("Appointment Number not found in system records!", expectedUIResponse, 
             "System must display the correct error notification for invalid/non-existent codes.");
     }
+
+   
 }

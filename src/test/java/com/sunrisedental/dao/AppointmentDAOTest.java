@@ -22,7 +22,7 @@ public class AppointmentDAOTest {
         testAppointment.setPatientName("John Doe");
         testAppointment.setAddress("123 Main Street, Colombo");
         testAppointment.setContactNumber("0712345678");
-        testAppointment.setDentistName("Dr. Smith");
+        testAppointment.setDentistName("Dr. Test Dentist");
         testAppointment.setTreatmentType("Cleaning");
         testAppointment.setAppointmentDate("2026-10-15");
         testAppointment.setAppointmentTime("10:00:00");
